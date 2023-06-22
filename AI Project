@@ -1,0 +1,582 @@
+AI Project
+
+
+
+
+
+from IPython.display import clear_output
+import time
+from tqdm import tqdm
+
+def loading():
+    for i in tqdm(range(10), desc = 'LOADING PLEASE WAIT   '):
+        time.sleep(0.5)
+def clearScreen():
+    for i in range(50):
+        clear_output(wait=True)
+        print("")
+def groupDetail():
+    border()
+    print('Group Members: \n-----------------\n\t\t--> Muhammad Rashid Shafique \n\t\t--> Ushna Nadeem \n\t\t--> Junaid Khan ')
+    border()     
+    x1=input()   
+def border():
+    print('********')
+
+#---------------------------------------------------------------------------------------------#
+
+def StartingDesign():
+    border()
+    print('\n\t\t\t--> This is Dermatologist Consultancy Expert System')
+    border()
+
+def question():
+    border()
+    print('Choose one of the following:')
+    border()
+    border()
+    print('\n1: List the problems which usually people have these days')
+    print('2: view treatment(history based) by input diseases (expert)')
+    print('3: Ask dorctor (expert system) for suggestions/consultancy ')
+    print('4: Exit\n')
+    border()
+    choice1 = input('Enter your choice: ')
+    if (choice1 == '1' or choice1 == 'list' or choice1 == 'LIST' or choice1 == 'List' ):
+        clearScreen()
+        loading()
+        clearScreen()
+        list()
+    elif (choice1 == '2' or choice1 == 'search'):
+        clearScreen()
+        loading()
+        clearScreen()
+        View_Treatment()
+    elif (choice1 == '3' or choice1 == 'Ask doctor' or choice1 == 'consultancy' or choice1 == 'suggestion'):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    elif (choice1 == '4' or choice1 == 'exit' or choice1 == 'Exit' or choice1 == 'EXIT' ):
+        print()
+
+    else:
+        #-----------------------
+
+        print('wrong input. please try again')
+        question()
+
+def list():
+    print('Here is the list of problems which usually people have these days....')
+    print('1: oily skin \n2: dry skin \n3: Acne')
+    print('4: rashes \n5: open pores \n6: hives')
+    print('7: dark spots\n8: melasma')
+    print('----------------------------------------')
+    print('----------------------------------------')
+    choice2 = input('input any key to continue: ')
+    clearScreen()
+    question()
+def Simplelist():
+    clearScreen()
+    print('Here is the list of problems which usually people have these days....')
+    print('1: oily skin \n2: dry skin \n3: Acne')
+    print('4: rashes \n5: open pores \n6: hives')
+    print('7: dark spots\n8: melasma')
+    print('----------------------------------------')
+    print('----------------------------------------')
+    
+def View_Treatment():
+    border()
+    print('***View Treatments(history based)***' )
+    border()
+    print('input any disease name: ')
+    treatmentview = input()
+    if (treatmentview == '4' or treatmentview == 'i am having rashes' or treatmentview == 'rashes' or treatmentview == 'RASHES'):
+        
+        Rashes()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '3' or treatmentview == 'Acne' or treatmentview == 'acne' or treatmentview == 'ACNE'):
+        Acne()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '1' or treatmentview == 'oily skin' or treatmentview == 'Oily Skin' or treatmentview == 'Oily skin' or treatmentview == 'OILY SKIN'):
+        Oily_Skin()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '2' or treatmentview == 'dry skin' or treatmentview == 'Dry Skin' or treatmentview == 'DRY SKIN'):
+        Dry_Skin()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '5' or treatmentview == 'Open Pores' or treatmentview == 'open pores' or treatmentview == 'pores' or treatmentview == 'PORES' ):
+        Open_Pores()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '6' or treatmentview == 'Hives' or treatmentview == 'hives' or treatmentview == 'HIVES'):     
+        Hives()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '7' or treatmentview == 'dark sports' or treatmentview == 'dark spot' or treatmentview == 'Dark Spot' or treatmentview == 'darkspot'):
+        Dark_spots()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '8' or treatmentview == 'melasma' or treatmentview == 'Melasma' or treatmentview == 'MELASMA' or treatmentview == 'milasma'):
+        Melasma()
+        re_confermation_continue_or_not()
+    elif(treatmentview == '9' or treatmentview == 'main menu' or treatmentview == 'exit' ):
+        View_Treatment()
+        re_confermation_continue_or_not()
+    else: 
+        print('\nwrong data entered please try again...\n ')
+        border()
+        print('1: show suggestion\n2: try again without suggestion\n3: exit')
+        border()
+        exit1=input('input your choice: ')
+        if(exit1 == '1' or exit1 == 'show suggestion' or exit1 == 'show'):
+            loading()
+            Simplelist()
+            View_Treatment()
+        elif(exit1=='3' or exit1 == 'exit'):
+            print()
+        else:
+            View_Treatment()
+def re_confermation_continue_or_not():
+    print('1: search for more\n2: main menu')
+    confirmation = input('input your choice:   ')
+    if(confirmation == '1' or confirmation == 'more'):
+        clearScreen()
+        View_Treatment()
+    elif(confirmation == '2' or confirmation == 'mainmenu' or confirmation == 'main menu' ):
+        loading()
+        question()
+        loading()
+    else:
+        re_confermation_continue_or_not()
+        
+    
+def Rashes():
+    border()
+    print("\t\t\t-->problem: Rashes")
+    border()
+    print("on examination we recomend that:\n1) Avoid scrubbing you skin.\n2) Use cleanser and apply it gently. \n3) Use warm (not too hot) water for cleaning, Just dry it don't rub.")
+    border()
+def rashesinve():
+    clearScreen()
+    print('did you having any elergy? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('did you work more than 5 hours a day? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n') or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO'):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Rashes()
+        print()
+        
+def generatesuggestion():
+    for i in tqdm(range(10), desc = 'generating consulation advice'):
+        time.sleep(0.5)
+    
+    
+    
+def Acne():
+    border()
+    print("\t\t\t-->problem: Acne")
+    border()
+    print("on examination we recomend that:\n1) You need antibiotics to reduce bacteria on your skin.\n2) This is an over-the-counter (OTC) cream that kills bacteria and helps you to acne free skin.")
+    border()
+def acneinve():
+    clearScreen()
+    print('did you having any skin elergy? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('did you any other skin infection? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n') or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO'):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Acne()
+        print()
+     
+    
+    
+    
+def Oily_Skin():
+    border()
+    print("\t\t\t-->problem: Oily Skin")
+    border()
+    print("on examination we recomend that:\n1) Wash your skin regularly.\n2) Apply a skin tonner.\n3) Use Facial Mask. \n4) Apply moisturizer.")
+    border()
+def oilyskininve():
+    clearScreen()
+    print('did you stay out for more than 8 hours a day? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('did you work more than 5 hours a day? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Oily_Skin()
+        print()
+     
+    
+    
+    
+def Dry_Skin():    
+    border()
+    print("\t\t\t-->problem: Dry Skin")
+    border()
+    print("on examination we recomend that:\n1) Taking bath to 5 or 10 minutes.\n2) Wash your skin with gentle and fragrance free cleanser. \n3) Slather/spread the moisturizer immediately after drying your skin.")
+    border()
+def dryskininve():
+    clearScreen()
+    print('did you stay out for more than 8 hours a day? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('did you work more than 5 hours a day? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Dry_Skin()
+        print()
+     
+    
+  
+    
+    
+    
+def Open_Pores():
+    border()
+    print("\t\t\t-->problem: Open Pores")
+    border()
+    print("on examination we recomend that:\n1) you should use non-comedogenic skin care products.\n2) Use warm water to wash your face.\n3) Clean your face twice a day.")
+    border()
+def openporesinve():
+    clearScreen()
+    print('do you have oily skin? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('do you have any genetic disease of skin? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Open_Pores()
+        print()
+     
+    
+  
+    
+    
+    
+def Hives():
+    border()
+    print("\t\t\t-->problem: Hives")
+    border()
+    print("on examination we recomend that:\n1) If your symptoms are mild, you may not need treatment.\n2) Avoid overheating.\n3) Wear loose-fitting, cotton clothes.\n4) Apply a cold compress, such as ice cubes wrapped in a washcloth, to the itchy skin several times a day.\n5) Prevent dry skin by using a fragrance free moisturizer several times a day.")
+    border()
+def hivesinve():
+    clearScreen()
+    print('do you scratch your skin? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('did you have any skin infection? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Hives()
+        print()
+     
+    
+  
+    
+    
+    
+def Dark_spots():
+    border()
+    print("\t\t\t-->problem: Dark Spots")
+    border()
+    print("on examination we recomend that:\n1) Dark spots on the skin do not require treatment.\n2) If u want to remove your dark spots then wo have to do a laser treatment.\n3) Or you have to take a chemical peels.")
+    border()
+def darkspotinve():
+    clearScreen()
+    print('do you work on laptop or mobile for more than 5 hours a day? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('do you have deficiency of blood? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Dark_spots()
+        print()
+     
+    
+  
+    
+    
+def Melasma():
+    border()
+    print("\t\t\t-->problem: Melasma")
+    border()
+    print("on examination we recomend that:\n1) Triple combination cream (hydroquinone, tretinoin, and corticosteroid) the most effective treatment for melasma.\n2) Also you can use Chemical peels to come over with melasma.\n3) Or you have to take a chemical peels.")
+    border()
+def melasmainve():
+    clearScreen()
+    print('do you have deficiency of vitamin C and D? (y/n)')
+    s1 = input()
+    clearScreen()
+    print('do you work in any type of ultra voilent location? (y/n)')
+    s2=input()
+    if(s1 == 'n' and s2 == 'n' or (s1 == 'no' and s2 == 'no') or (s1 == 'NO' and s2 == 'NO')):
+        clearScreen()
+        loading()
+        clearScreen()
+        doctorSelection()
+    else:
+        clearScreen()
+        generatesuggestion()
+        clearScreen()
+        Melasma()
+        print()
+     
+    
+  
+    
+
+
+
+
+def doctorSelection():
+    print('First answer few questions')
+    border()
+    gender = input('input your gender:   ')
+    name = input('input your name:   ')
+    category(gender, name)
+
+
+def category(gender, name):
+    print('okay so Mr/Mrs ---',name.upper(), '---')
+    print('input your age:')
+    age = int(input())
+    if(age<=0):
+        print('enter valid age please')
+    elif(age >= 1 and age <= 18):
+        clearScreen()
+        print('you will be examined by the dermatologist consultant of children...')
+        Child_Consultancy()
+    elif(age > 18 and age <= 150):
+        clearScreen()
+        print('you will be examined by the dermatologist consultant of adults...')
+        Adult_Consultancy()
+    else: 
+        clearScreen()
+        print('wrong input...')
+        print('make sure that this softwere is only for under 150 year of age people')
+        category('', 'client')
+        
+def loadingdoc():
+    for i in tqdm(range(10), desc = 'Connecting to respective consultant '):
+        time.sleep(0.5)
+    
+def Child_Consultancy():
+    clearScreen()
+    loadingdoc()
+    clearScreen()
+    child_problems()
+    
+def Adult_Consultancy():
+    clearScreen()
+    loadingdoc()
+    clearScreen()
+    adult_problems()
+
+def child_problems():
+    print('--------------------------------------------------------------------------------')
+    print('\tHy i-m your consultant. My name is Rashid. How may i help you')
+    print('--------------------------------------------------------------------------------')
+    print('\ninput your problem/issue need to be consulted')
+    problem = input()
+    if(problem == 'rashes' or problem == 'Rashes' or problem == 'RASHES' or problem == 'rashis' or problem == 'i am having rashes'):
+        rashesinve()
+        x=input()
+    elif(problem == 'acne' or problem == 'Acne' or problem == 'ACNE' or problem == 'i am having acne' ):
+        acneinve()
+        x=input()
+    elif(problem == 'Oily Skin' or problem == 'oilyskin' or problem == 'OILY SKIN' or problem == 'oily skin' or problem == 'i am having oily skin'):
+        oilyskininve()
+        x=input()
+    elif(problem == 'dry skin' or problem == 'Dry Skin' or problem == 'DRY SKIN' or problem == 'dryskin' or problem == 'i am having dry skin'):
+        dryskininve()
+        x=input()
+    elif(problem == 'open pores' or problem == 'open pore' or problem == 'Open Pores' or problem == 'openpores' or problem == 'i am having open pores'):
+        openporesinve()
+        x=input()
+    elif(problem == 'hives' or problem == 'HIVES' or problem == 'Hives' or problem == 'hive' or problem == 'i am having hives'):
+        hivesinve()
+        x=input()
+    elif(problem == 'Dark spots' or problem == 'dark spots' or problem == 'dark spot' or problem == 'darkspot' or problem == 'i am having dark spots'):
+        darkspotinve()
+        x=input()
+    elif(problem == 'melasma' or problem == 'milasma' or problem == 'MELASMA' or problem == 'MILASMA' or problem == 'i am having melasma'):
+        melasmainve()
+        x=input()
+    else:
+        clearScreen()
+        print('wrong input....')
+        border()
+        print('1: do you want suggestions in input\n2: try again without suggestion\n3: exit the softwere\ninput your choice: ')
+        x=input()
+        if x == '1' or x == 'sugestions' or x == 'suggestion' or x == 'suggestions':
+            clearScreen()
+            generatingSuggestion()
+            suggestionlsit()
+            child_problems()
+            print('suggestion list')
+        elif x == '2' or x == 'try again':
+            child_problems()
+        elif x == '3' or x == 'exit':
+            print()
+        else:
+            child_problems()
+def adult_problems():
+    print('--------------------------------------------------------------------------------')
+    print('\tHy i-m your consultant. My name is Junaid. How may i help you')
+    print('--------------------------------------------------------------------------------')
+    print('\ninput your problem/issue need to be consulted')
+    problem = input()
+
+    if(problem == 'rashes' or problem == 'Rashes' or problem == 'RASHES' or problem == 'reshes' or problem == 'i am having rashes'):
+        print()
+        rashesinve()
+        x=input()
+    elif(problem == 'acne' or problem == 'Acne' or problem == 'ACNE' or problem == 'i am having acne' ):
+        print()
+        acneinve()
+        x=input()
+    elif(problem == 'Oily Skin' or problem == 'oilyskin' or problem == 'OILY SKIN' or problem == 'oily skin' or problem == 'i am having oily skin'):
+        print()
+        oilyskininve()
+        x=input()
+    elif(problem == 'dry skin' or problem == 'Dry Skin' or problem == 'DRY SKIN' or problem == 'dryskin' or problem == 'i am having dry skin'):
+        print()
+        dryskininve()
+        x=input()
+    elif(problem == 'open pores' or problem == 'open pore' or problem == 'Open Pores' or problem == 'openpores' or problem == 'i am having open pores'):
+        print()
+        openporesinve()
+        x=input()
+    elif(problem == 'hives' or problem == 'HIVES' or problem == 'Hives' or problem == 'hive' or problem == 'i am having hives'):
+        print()
+        hivesinve()
+        x=input()
+    elif(problem == 'Dark spots' or problem == 'dark spots' or problem == 'dark spot' or problem == 'darkspot' or problem == 'i am having dark spots'):
+        print()
+        darkspotinve()
+        x=input()
+    elif(problem == 'melasma' or problem == 'milasma' or problem == 'MELASMA' or problem == 'MILASMA' or problem == 'i am having melasma'):
+        print()
+        melasmainve()
+        x=input()
+    else:
+        clearScreen()
+        print('wrong input....')
+        border()
+        print('1: do you want suggestions in input\n2: try again without suggestion\n3: exit the softwere\ninput your choice: ')
+        x=input()
+        if x == '1' or x == 'sugestions' or x == 'suggestion' or x == 'suggestions':
+            clearScreen()
+            generatingSuggestion()
+            suggestionlsit()
+            adult_problems()
+            
+        elif x == '2' or x == 'try again':
+            adult_problems()
+        elif x == '3' or x == 'exit':
+            print()
+        else:
+            adult_problems()
+            
+def suggestionlsit():
+    
+    clearScreen()
+    print('the inputs can be...')
+    border()
+    print('rashes')
+    print('acne')
+    print('oily skin')
+    print('dark skin')
+    print('open pores')
+    print('hives')
+    print('dark spots')
+    print('melasma\n\n')
+    border()
+def generatingSuggestion():
+    for i in tqdm(range(10), desc = 'Generating Suggestions please wait -->'):
+        time.sleep(0.5)
+     
+def agee():
+    age = int(input('input age:   '))
+    if(age<=0):
+        print('enter valid age please')
+    elif(age >= 1 and age <= 18):
+        clearScreen()
+        print('you will be examined by the dermatologist consultant of children...')
+        Child_Consultancy()
+    elif(age > 18 and age <= 150):
+        clearScreen()
+        print('you will be examined by the dermatologist consultant of adults...')
+        agee()
+    else: 
+        clearScreen()
+        print('wrong input...')
+        print('make sure that this softwere is only for under 150 year of age people')
+        agee()
+
+
+#adult_problems()
+#######################
+groupDetail()   
+StartingDesign()
+clearScreen()
+question()
+clearScreen()
+print('thankyou for your precious time!')
+
